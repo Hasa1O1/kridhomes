@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: kridhomes
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm install -g serve && serve -s dist -l 3000
+    envVars:
+      - key: VITE_SUPABASE_URL
+        scope: build
+      - key: VITE_SUPABASE_ANON_KEY
+        scope: build
