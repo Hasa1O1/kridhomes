@@ -5,11 +5,11 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/index.html#home' },
+    { name: 'About', href: '/about.html#about' },
+    { name: 'Services', href: '/services.html#services' },
+    { name: 'Team', href: '/team.html#team' },
+    { name: 'Contact', href: '/contact.html#contact' },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact.html#contact"
               className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium"
             >
               Get Started
@@ -68,7 +68,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact.html#contact"
               className="block text-center bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium"
               onClick={() => setIsOpen(false)}
             >

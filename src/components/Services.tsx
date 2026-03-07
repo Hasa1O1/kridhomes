@@ -136,7 +136,7 @@ export default function Services() {
                 </ul>
 
                 <a
-                  href="#contact"
+                  href="/contact.html#contact"
                   className="inline-flex items-center gap-2 text-red-600 font-semibold group-hover:gap-3 transition-all"
                 >
                   Learn More
