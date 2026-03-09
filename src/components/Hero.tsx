@@ -33,7 +33,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <a
-              href="/services.html#services"
+              href="./services.html"
               className="group bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-all duration-200 font-semibold text-lg flex items-center gap-2 shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -43,7 +43,7 @@ export default function Hero() {
               />
             </a>
             <a
-              href="/contact.html#contact"
+              href="./contact.html"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-semibold text-lg border-2 border-gray-200 shadow-lg hover:shadow-xl"
             >
               Contact Us
