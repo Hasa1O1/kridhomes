@@ -157,14 +157,22 @@ export default function Contact() {
               </h3>
               <div className="flex gap-4">
                 {[
-                  { icon: 'facebook', label: 'Facebook' },
-                  { icon: 'instagram', label: 'Instagram' },
-                  { icon: 'linkedin', label: 'LinkedIn' },
-                  { icon: 'whatsapp', label: 'WhatsApp' },
+                  {
+                    icon: 'facebook',
+                    label: 'Facebook',
+                    href: 'https://www.facebook.com/share/1DRboyaY8u/',
+                  },
+                  {
+                    icon: 'instagram',
+                    label: 'Instagram',
+                    href: 'https://www.instagram.com/kridhomes?igsh=MTZwZzg2aWwwbmViYg==',
+                  },
                 ].map((social) => (
                   <a
                     key={social.icon}
-                    href="#"
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors"
                     aria-label={social.label}
                   >
