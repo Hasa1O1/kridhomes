@@ -98,9 +98,9 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-red-200"
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-red-200 text-center md:text-left"
               >
-                <div className="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -118,7 +118,10 @@ export default function Services() {
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                    <li
+                      key={idx}
+                      className="flex items-start justify-center gap-2 md:justify-start"
+                    >
                       <svg
                         className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0"
                         fill="currentColor"

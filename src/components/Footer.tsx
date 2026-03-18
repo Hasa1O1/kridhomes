@@ -1,18 +1,13 @@
+import logo from '../lib/Logo.png';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="text-3xl font-bold">
-                <span className="text-white">K</span>
-                <span className="text-red-600">H</span>
-              </div>
-              <div className="text-sm font-semibold tracking-wider">
-                <span className="text-red-600">KRID</span>{' '}
-                <span className="text-white">HOMES</span>
-              </div>
+        <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
+          <div className="md:col-span-2 flex flex-col items-center md:items-start">
+            <div className="flex items-center justify-center md:justify-start mb-4">
+              <img src={logo} alt="KridHomes logo" className="h-16 w-auto" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Your trusted real estate partner in Zambia. We provide peace of

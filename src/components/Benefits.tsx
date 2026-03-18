@@ -41,7 +41,7 @@ export default function Benefits() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -top-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border-4 border-red-600">
+            <div className="absolute left-1/2 -top-8 -translate-x-1/2 bg-white p-6 rounded-2xl shadow-xl border-4 border-red-600 text-center lg:left-auto lg:right-8 lg:translate-x-0">
               <div className="text-4xl font-bold text-red-600 mb-1">100%</div>
               <div className="text-gray-700 font-semibold">
                 Client Satisfaction
@@ -49,7 +49,7 @@ export default function Benefits() {
             </div>
           </div>
 
-          <div className="space-y-8 order-1 lg:order-2">
+          <div className="space-y-8 order-1 lg:order-2 text-center lg:text-left">
             <div>
               <div className="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide mb-4">
                 WHY CHOOSE US
@@ -69,7 +69,7 @@ export default function Benefits() {
                 return (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
+                    className="flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 lg:flex-row lg:items-start"
                   >
                     <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-white" />

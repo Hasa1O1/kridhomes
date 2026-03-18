@@ -1,4 +1,5 @@
 import { Award, GraduationCap, Briefcase } from 'lucide-react';
+import ceoPicture from '../lib/ceo-photo.jpg';
 
 export default function Team() {
   return (
@@ -19,12 +20,12 @@ export default function Team() {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="grid md:grid-cols-5 gap-0">
+            <div className="grid md:grid-cols-5 gap-0 text-center md:text-left">
               <div className="md:col-span-2 bg-gradient-to-br from-red-600 to-red-700 p-12 flex items-center justify-center">
                 <div className="text-center text-white">
                   <div className="w-48 h-48 mx-auto bg-white rounded-full overflow-hidden mb-6 border-4 border-white/30">
                     <img
-                      src="https://images.pexels.com/photos/3760607/pexels-photo-3760607.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      src={ceoPicture}
                       alt="Mr. Chiyulo Mukonda"
                       className="w-full h-full object-cover"
                     />
@@ -54,7 +55,7 @@ export default function Team() {
                   </div>
 
                   <div className="grid gap-4">
-                    <div className="flex items-start gap-3">
+                    <div className="flex flex-col items-center gap-3 md:flex-row md:items-start">
                       <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <GraduationCap className="w-5 h-5 text-red-600" />
                       </div>
@@ -68,7 +69,7 @@ export default function Team() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
+                    <div className="flex flex-col items-center gap-3 md:flex-row md:items-start">
                       <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Award className="w-5 h-5 text-red-600" />
                       </div>
@@ -82,7 +83,7 @@ export default function Team() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
+                    <div className="flex flex-col items-center gap-3 md:flex-row md:items-start">
                       <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Briefcase className="w-5 h-5 text-red-600" />
                       </div>

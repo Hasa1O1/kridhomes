@@ -1,6 +1,27 @@
 import { useState } from 'react';
-import { Phone, Mail, Globe, MapPin, Send } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  Globe,
+  MapPin,
+  Send,
+  Facebook,
+  Instagram,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
+
+const socials = [
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1DRboyaY8u/',
+  },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    href: 'https://www.instagram.com/kridhomes?igsh=MTZwZzg2aWwwbmViYg==',
+  },
+];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -84,7 +105,7 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+          <div className="space-y-8 text-center lg:text-left">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Information
@@ -92,7 +113,7 @@ export default function Contact() {
               <div className="space-y-4">
                 <a
                   href="tel:+260978571130"
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group"
+                  className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group sm:flex-row sm:text-left"
                 >
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="w-6 h-6 text-white" />
@@ -107,7 +128,7 @@ export default function Contact() {
 
                 <a
                   href="mailto:Info@kridhomes.com"
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group"
+                  className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group sm:flex-row sm:text-left"
                 >
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6 text-white" />
@@ -124,7 +145,7 @@ export default function Contact() {
                   href="http://www.kridhomes.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group"
+                  className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group sm:flex-row sm:text-left"
                 >
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Globe className="w-6 h-6 text-white" />
@@ -137,7 +158,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
+                <div className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-xl sm:flex-row sm:text-left">
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
@@ -155,21 +176,13 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Follow Us
               </h3>
-              <div className="flex gap-4">
-                {[
-                  {
-                    icon: 'facebook',
-                    label: 'Facebook',
-                    href: 'https://www.facebook.com/share/1DRboyaY8u/',
-                  },
-                  {
-                    icon: 'instagram',
-                    label: 'Instagram',
-                    href: 'https://www.instagram.com/kridhomes?igsh=MTZwZzg2aWwwbmViYg==',
-                  },
-                ].map((social) => (
+              <div className="flex justify-center gap-4 lg:justify-start">
+                {socials.map((social) => {
+                  const Icon = social.icon;
+
+                  return (
                   <a
-                    key={social.icon}
+                    key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -177,14 +190,15 @@ export default function Contact() {
                     aria-label={social.label}
                   >
                     <span className="sr-only">{social.label}</span>
-                    <div className="w-6 h-6" />
+                    <Icon className="w-6 h-6" />
                   </a>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="bg-gray-50 rounded-2xl p-8 text-center lg:text-left">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Send Us a Message
             </h3>
