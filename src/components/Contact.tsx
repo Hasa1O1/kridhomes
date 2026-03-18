@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   Phone,
   Mail,
@@ -7,8 +7,8 @@ import {
   Send,
   Facebook,
   Instagram,
+  MessageCircle,
 } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 
 const socials = [
   {
@@ -23,7 +23,11 @@ const socials = [
   },
 ];
 
+const whatsappNumber = '260978571130';
+const emailAddress = 'Info@kridhomes.com';
+
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,50 +35,34 @@ export default function Contact() {
     service: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const buildMessage = () =>
+    [
+      'Hello KridHomes,',
+      '',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Service: ${formData.service}`,
+      '',
+      'Message:',
+      formData.message,
+    ].join('\n');
+
+  const handleWhatsAppSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildMessage())}`;
+    window.location.href = whatsappUrl;
+  };
 
-    try {
-      const { error } = await supabase.from('contact_submissions').insert([
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          message: formData.message,
-        },
-      ]);
-
-      if (error) throw error;
-
-      setSubmitStatus({
-        type: 'success',
-        message:
-          'Thank you for contacting us! We will get back to you shortly.',
-      });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
-      });
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: 'Something went wrong. Please try again or contact us directly.',
-      });
-    } finally {
-      setIsSubmitting(false);
+  const handleEmailRedirect = () => {
+    if (!formRef.current?.reportValidity()) {
+      return;
     }
+
+    const subject = `KridHomes Inquiry - ${formData.service}`;
+    const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildMessage())}`;
+    window.location.href = mailtoUrl;
   };
 
   const handleChange = (
@@ -203,19 +191,11 @@ export default function Contact() {
               Send Us a Message
             </h3>
 
-            {submitStatus.type && (
-              <div
-                className={`mb-6 p-4 rounded-lg ${
-                  submitStatus.type === 'success'
-                    ? 'bg-green-50 text-green-800'
-                    : 'bg-red-50 text-red-800'
-                }`}
-              >
-                {submitStatus.message}
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              ref={formRef}
+              onSubmit={handleWhatsAppSubmit}
+              className="space-y-4"
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -323,17 +303,21 @@ export default function Contact() {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
                 className="w-full bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 font-semibold text-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
               >
-                {isSubmitting ? (
-                  'Sending...'
-                ) : (
-                  <>
-                    Send Message
-                    <Send size={20} />
-                  </>
-                )}
+                <>
+                  Send via WhatsApp
+                  <MessageCircle size={20} />
+                </>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleEmailRedirect}
+                className="w-full bg-white text-gray-900 px-8 py-4 rounded-lg border-2 border-gray-200 hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+              >
+                Send via Email
+                <Send size={20} />
               </button>
             </form>
           </div>
