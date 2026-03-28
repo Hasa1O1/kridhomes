@@ -18,7 +18,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="KridHomes logo" className="h-12 w-auto" />
+            <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
+            <div className="leading-tight">
+              <div className="text-base md:text-lg font-bold tracking-wide text-gray-900">
+                KRIDHOMES
+              </div>
+              <div className="text-[11px] md:text-xs font-medium tracking-[0.2em] text-red-600 uppercase">
+                Your Property Partner
+              </div>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

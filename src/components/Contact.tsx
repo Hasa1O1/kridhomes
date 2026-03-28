@@ -24,7 +24,7 @@ const socials = [
 ];
 
 const whatsappNumber = '260978571130';
-const emailAddress = 'Info@kridhomes.com';
+const emailAddress = 'info@kridhomes.com';
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -115,7 +115,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="mailto:Info@kridhomes.com"
+                  href="mailto:info@kridhomes.com"
                   className="flex flex-col items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors group sm:flex-row sm:text-left"
                 >
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -124,7 +124,7 @@ export default function Contact() {
                   <div>
                     <div className="text-sm text-gray-600">Email</div>
                     <div className="font-semibold text-gray-900">
-                      Info@kridhomes.com
+                      info@kridhomes.com
                     </div>
                   </div>
                 </a>

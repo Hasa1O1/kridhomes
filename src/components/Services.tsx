@@ -9,68 +9,70 @@ import {
 
 const services = [
   {
-    icon: Home,
-    title: 'Property Management',
-    tagline: 'Stress-Free Ownership',
-    description:
-      'Rent collection, property concierge, lease administration, maintenance, repair works, tenant mix and screening.',
-    features: [
-      'Professional rent collection',
-      'Comprehensive lease administration',
-      'Regular maintenance & repairs',
-      'Tenant screening & management',
-    ],
-  },
-  {
     icon: Calculator,
-    title: 'Valuation',
-    tagline: 'Know Your True Worth',
+    title: 'Valuation Services',
+    tagline: 'Accurate and reliable valuation expertise',
     description:
-      'Professional valuation of land, buildings, moveable assets, and biological assets.',
+      'Accurate and professional valuation services for informed decision-making.',
     features: [
-      'Accurate property valuations',
-      'Market analysis reports',
-      'Asset valuation services',
-      'Investment feasibility studies',
+      'Investment yield and return analysis',
+      'Valuation of land, buildings, plant & machinery for various purposes',
+      'Mining, Agricultural and biological asset valuation',
+      'Movable asset valuation',
     ],
   },
   {
     icon: Key,
     title: 'Sales & Lettings',
-    tagline: 'Smooth Transactions',
+    tagline: 'Professional transaction handling',
     description:
-      'Asset disposal, space leasing, and comprehensive tenant screening services.',
+      'Efficient and professional handling of property transactions.',
     features: [
-      'Property sales & acquisitions',
-      'Residential & commercial lettings',
-      'Professional tenant screening',
-      'Market positioning strategy',
+      'Market positioning and pricing strategies',
+      'Tenant sourcing and screening',
+      'Lease structuring and management',
+      'Legal coordination for secure transactions',
+    ],
+  },
+  {
+    icon: Home,
+    title: 'Property Management Services',
+    tagline: 'Sustained value through active management',
+    description:
+      'Comprehensive management of property assets to ensure optimal performance, tenant satisfaction, and sustained value.',
+    features: [
+      'Rent collection and financial management',
+      'Tenant relations and lease administration',
+      'Routine inspections and property maintenance coordination',
+      'Service charge management and budgeting',
+      'Vacancy management and occupancy optimisation',
     ],
   },
   {
     icon: Settings,
     title: 'Facilities Management',
-    tagline: 'Well-Maintained Investments',
+    tagline: 'Integrated asset support',
     description:
-      'Building performance efficiency, energy saving, space maximization, building safety, and cost control.',
+      'Integrated management of property assets to enhance efficiency, reduce costs, and support operational objectives.',
     features: [
-      'Building performance optimization',
-      'Energy efficiency solutions',
-      'Safety compliance management',
-      'Operational cost control',
+      'Space utilisation and optimisation',
+      'Energy efficiency and cost control',
+      'Building services management',
+      'PropTech integration and smart systems',
+      'Real-time facilities support (concierge services)',
     ],
   },
   {
     icon: Lightbulb,
-    title: 'Consultancy',
-    tagline: 'Expert Advice for Wise Decisions',
+    title: 'Property Consultancy',
+    tagline: 'Data-driven advisory',
     description:
-      'Property development feasibility studies, real estate data analytics, and financing options analysis.',
+      'Professional, data-driven advisory backed by market research and practical experience.',
     features: [
-      'Development feasibility studies',
-      'Market research & analytics',
-      'Investment strategy planning',
-      'Financing options analysis',
+      'Investment advisory and feasibility analysis',
+      'Market research and property insights',
+      'Pre-construction and development guidance',
+      'Land administration and planning',
     ],
   },
 ];
@@ -87,14 +89,15 @@ export default function Services() {
             We Provide The <span className="text-red-600">Best Solution</span>
           </h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-600">
-            At KridHomes, we don't just provide real estate services — we build
-            lifelong partnerships centered on our core values.
+            Premium property solutions designed to protect, grow, and optimise
+            real estate investments for our clients.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
+
             return (
               <div
                 key={index}

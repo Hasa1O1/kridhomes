@@ -96,7 +96,7 @@ export default function Story() {
               />
             </div>
             <div className="absolute left-1/2 -bottom-8 -translate-x-1/2 bg-red-600 text-white p-8 rounded-2xl shadow-xl max-w-xs text-center lg:left-auto lg:-left-8 lg:translate-x-0 lg:text-left">
-              <div className="text-5xl font-bold mb-2">5+</div>
+              <div className="text-5xl font-bold mb-2">15+</div>
               <div className="text-lg">
                 Years of Combined Experience in Real Estate
               </div>

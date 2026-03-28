@@ -1,30 +1,39 @@
-import { Award, TrendingUp, Shield, Eye, Heart } from 'lucide-react';
+import { Award, TrendingUp, Eye, Shield } from 'lucide-react';
 
 const benefits = [
   {
     icon: Award,
-    title: 'Expert Guidance',
-    description: 'Trusted professionals who know the Zambian market.',
+    title: 'Experienced Property Professionals',
+    description:
+      'A team with strong expertise in real estate investment, valuation, land management, project planning, and asset management.',
   },
   {
     icon: TrendingUp,
-    title: 'Smart Investments',
-    description: 'Reliable valuations and strategies to grow your wealth.',
-  },
-  {
-    icon: Shield,
-    title: 'Hassle-Free Management',
-    description: 'We handle the stress, you enjoy the returns.',
+    title: 'Investment-Focused Approach',
+    description:
+      'We exist to safeguard your real estate investments by providing:',
+    points: [
+      'Yield analysis and return projections',
+      'Payback period assessments',
+      'Rental cash flow analysis',
+      'Strategic asset growth insights',
+    ],
   },
   {
     icon: Eye,
     title: 'Integrity & Transparency',
-    description: 'Clear processes, no hidden surprises.',
+    description:
+      'We uphold legally compliant and internationally accepted standards to protect your financial interests.',
   },
   {
-    icon: Heart,
-    title: 'Peace of Mind',
-    description: 'Your property, in safe and capable hands.',
+    icon: Shield,
+    title: 'Stress-free Management',
+    description: 'Delivering:',
+    points: [
+      'Portfolio growth and value enhancement',
+      'Well-maintained and sustainable properties',
+      'Safe, secure, and functional environments',
+    ],
   },
 ];
 
@@ -52,20 +61,17 @@ export default function Benefits() {
           <div className="space-y-8 order-1 lg:order-2 text-center lg:text-left">
             <div>
               <div className="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide mb-4">
-                WHY CHOOSE US
+                WHY CHOOSE KRIDHOMES
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                What's In It <span className="text-red-600">For You?</span>
+                Why Choose <span className="text-red-600">KridHomes</span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                What are the benefits of this partnership? Here's what you gain
-                when you work with KridHomes.
-              </p>
             </div>
 
             <div className="space-y-6">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
+
                 return (
                   <div
                     key={index}
@@ -81,6 +87,19 @@ export default function Benefits() {
                       <p className="text-gray-600 leading-relaxed">
                         {benefit.description}
                       </p>
+                      {benefit.points && (
+                        <ul className="mt-3 space-y-2 text-gray-600">
+                          {benefit.points.map((point) => (
+                            <li
+                              key={point}
+                              className="flex items-start justify-center gap-2 lg:justify-start"
+                            >
+                              <span className="mt-0.5 text-red-600">-</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 );
