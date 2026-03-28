@@ -17,7 +17,11 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3">
+          <a
+            href="./index.html"
+            className="flex items-center space-x-3"
+            aria-label="Go to home page"
+          >
             <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
             <div className="leading-tight">
               <div className="text-base md:text-lg font-bold tracking-wide text-gray-900">
@@ -27,7 +31,7 @@ export default function Navigation() {
                 Your Property Partner
               </div>
             </div>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (

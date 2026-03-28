@@ -6,9 +6,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
           <div className="md:col-span-2 flex flex-col items-center md:items-start">
-            <div className="flex items-center justify-center md:justify-start mb-4">
+            <a
+              href="./index.html"
+              className="flex items-center justify-center md:justify-start mb-4"
+              aria-label="Go to home page"
+            >
               <img src={logo} alt="KridHomes logo" className="h-16 w-auto" />
-            </div>
+            </a>
             <p className="text-gray-400 mb-6 max-w-md">
               Your trusted real estate partner in Zambia. We provide peace of
               mind in property dealings through professional, reliable, and
