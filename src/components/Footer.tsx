@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-gray-400">
               <div>Phone: +260-978-571-130</div>
-              <div>Email: Info@kridhomes.com</div>
+              <div>Email: info@kridhomes.com</div>
               <div>Website: www.kridhomes.com</div>
             </div>
           </div>
