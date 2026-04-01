@@ -24,11 +24,14 @@ export default function Navigation() {
           >
             <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
             <div className="leading-tight">
-              <div className="text-base md:text-lg font-bold tracking-wide text-gray-900">
-                KRIDHOMES
+              <div className="text-base md:text-lg font-bold tracking-[0.32em] whitespace-nowrap">
+                <span className="text-red-600">KRID</span>{' '}
+                <span className="text-gray-900">HOMES</span>
               </div>
-              <div className="text-[11px] md:text-xs font-medium tracking-[0.2em] text-red-600 uppercase">
-                Your Property Partner
+              <div className="mt-1 flex items-center gap-2 text-[9px] md:text-[10px] font-semibold tracking-[0.18em] text-gray-700 uppercase">
+                <span className="h-px w-6 md:w-8 bg-gray-400"></span>
+                <span>Your Property Partner</span>
+                <span className="h-px w-6 md:w-8 bg-gray-400"></span>
               </div>
             </div>
           </a>
