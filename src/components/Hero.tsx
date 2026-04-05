@@ -22,7 +22,8 @@ export default function Hero() {
         <div className="space-y-8 bg-white/65 backdrop-blur-sm rounded-3xl px-6 py-10 sm:px-10 shadow-2xl border border-white/50">
           <div className="space-y-3">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-[0.08em]">
-              KRIDHOMES
+              <span className="text-red-600">KRID</span>
+              <span className="text-gray-900">HOMES</span>
             </h1>
             <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-red-600">
               Your Property Partner
