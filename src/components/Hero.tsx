@@ -20,12 +20,6 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="space-y-8 bg-white/65 backdrop-blur-sm rounded-3xl px-6 py-10 sm:px-10 shadow-2xl border border-white/50">
-          <div className="inline-block">
-            <span className="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide">
-              YOUR TRUSTED REAL ESTATE PARTNER
-            </span>
-          </div>
-
           <div className="space-y-3">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-[0.08em]">
               KRIDHOMES

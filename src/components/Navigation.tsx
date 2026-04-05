@@ -23,15 +23,15 @@ export default function Navigation() {
             aria-label="Go to home page"
           >
             <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
-            <div className="leading-tight">
-              <div className="text-base md:text-lg font-bold tracking-[0.32em] whitespace-nowrap">
-                <span className="text-red-600">KRID</span>{' '}
+            <div className="w-[168px] md:w-[230px] leading-tight">
+              <div className="flex items-center justify-between text-base md:text-lg font-bold tracking-[0.22em] whitespace-nowrap">
+                <span className="text-red-600">KRID</span>
                 <span className="text-gray-900">HOMES</span>
               </div>
-              <div className="mt-1 flex items-center gap-2 text-[9px] md:text-[10px] font-semibold tracking-[0.18em] text-gray-700 uppercase">
-                <span className="h-px w-6 md:w-8 bg-gray-400"></span>
+              <div className="mt-1 flex items-center gap-2 text-[8px] md:text-[10px] font-semibold tracking-[0.14em] text-gray-700 uppercase whitespace-nowrap">
+                <span className="h-px flex-1 bg-gray-400"></span>
                 <span>Your Property Partner</span>
-                <span className="h-px w-6 md:w-8 bg-gray-400"></span>
+                <span className="h-px flex-1 bg-gray-400"></span>
               </div>
             </div>
           </a>

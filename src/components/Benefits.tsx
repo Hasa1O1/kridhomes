@@ -118,37 +118,17 @@ export default function Benefits() {
         </div>
 
         <div className="mt-24 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-12 text-white">
+          <div className="text-center mb-8">
+            <div className="text-sm uppercase tracking-[0.3em] font-bold opacity-90">
+              Core Values
+            </div>
+          </div>
           <div className="grid md:grid-cols-5 gap-8 text-center">
-            <div>
-              <div className="text-sm uppercase tracking-wider mb-2 opacity-90">
-                Core Values
-              </div>
-              <div className="text-2xl font-bold">Professionalism</div>
-            </div>
-            <div>
-              <div className="text-sm uppercase tracking-wider mb-2 opacity-90">
-                Core Values
-              </div>
-              <div className="text-2xl font-bold">Integrity</div>
-            </div>
-            <div>
-              <div className="text-sm uppercase tracking-wider mb-2 opacity-90">
-                Core Values
-              </div>
-              <div className="text-2xl font-bold">Innovation</div>
-            </div>
-            <div>
-              <div className="text-sm uppercase tracking-wider mb-2 opacity-90">
-                Core Values
-              </div>
-              <div className="text-2xl font-bold">Excellence</div>
-            </div>
-            <div>
-              <div className="text-sm uppercase tracking-wider mb-2 opacity-90">
-                Core Values
-              </div>
-              <div className="text-2xl font-bold">Accountability</div>
-            </div>
+            <div className="text-2xl font-medium">Professionalism</div>
+            <div className="text-2xl font-medium">Integrity</div>
+            <div className="text-2xl font-medium">Innovation</div>
+            <div className="text-2xl font-medium">Excellence</div>
+            <div className="text-2xl font-medium">Accountability</div>
           </div>
         </div>
       </div>
