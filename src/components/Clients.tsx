@@ -1,15 +1,41 @@
-export default function Clients() {
-  const clients = [
-    'Izwe Savings & Loans',
-    'Oakberg',
-    'Meraki Farms',
-    'KeyHouse',
-    'Prime Axis Designs',
-    'Ludex Supply',
-    'TEZ',
-    'And More...',
-  ];
+import izweLogo from '../lib/Izwe Savings & Loans Logo.png';
+import keyHouseLogo from '../lib/KeyHouse Logo.jpeg';
+import ludexLogo from '../lib/Ludex Supply Logo.png';
+import merakiLogo from '../lib/Meraki Farms Logo.jpeg';
+import oakbergLogo from '../lib/Oakberg Logo.jpeg';
+import primeAxisLogo from '../lib/Prime Axis Designs Logo.jpeg';
 
+const clients = [
+  {
+    name: 'Ludex Supply',
+    logo: ludexLogo,
+  },
+  {
+    name: 'KeyHouse',
+    logo: keyHouseLogo,
+  },
+  {
+    name: 'Oakberg',
+    logo: oakbergLogo,
+  },
+  {
+    name: 'Izwe Savings & Loans',
+    logo: izweLogo,
+  },
+  {
+    name: 'Prime Axis Designs',
+    logo: primeAxisLogo,
+  },
+  {
+    name: 'Meraki Farms',
+    logo: merakiLogo,
+  },
+  {
+    name: 'And More...',
+  },
+];
+
+export default function Clients() {
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,12 +53,20 @@ export default function Clients() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {clients.map((client, index) => (
+          {clients.map((client) => (
             <div
-              key={index}
-              className="bg-white rounded-xl p-8 flex items-center justify-center text-center hover:shadow-lg transition-shadow duration-200 border border-gray-100"
+              key={client.name}
+              className="bg-white rounded-xl p-6 min-h-[168px] flex items-center justify-center text-center hover:shadow-lg transition-shadow duration-200 border border-gray-100"
             >
-              <div className="text-gray-700 font-semibold">{client}</div>
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  className="max-h-24 w-full object-contain"
+                />
+              ) : (
+                <div className="text-gray-700 font-semibold">{client.name}</div>
+              )}
             </div>
           ))}
         </div>
@@ -54,9 +88,9 @@ export default function Clients() {
               'NAPSA',
               'ZIVS Member',
               'ZPPA',
-            ].map((cert, index) => (
+            ].map((cert) => (
               <div
-                key={index}
+                key={cert}
                 className="text-center p-4 bg-gray-50 rounded-lg"
               >
                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-3">

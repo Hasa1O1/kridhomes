@@ -23,8 +23,8 @@ export default function Navigation() {
             aria-label="Go to home page"
           >
             <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
-            <div className="w-[172px] md:w-[250px] leading-none">
-              <div className="flex items-center justify-between text-[18px] md:text-[28px] font-black tracking-[0.26em] whitespace-nowrap">
+            <div className="w-[146px] md:w-[250px] leading-none">
+              <div className="flex items-center justify-between text-[16px] md:text-[28px] font-black tracking-[0.16em] md:tracking-[0.26em] whitespace-nowrap">
                 <span className="text-red-600">KRID</span>
                 <span className="text-gray-900">HOMES</span>
               </div>
