@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import logo from '../lib/Logo.png';
+import brandWordmark from '../lib/nav bar kridhomes name picture.png';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,17 +24,11 @@ export default function Navigation() {
             aria-label="Go to home page"
           >
             <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
-            <div className="w-[162px] md:w-[250px] leading-none">
-              <div className="flex items-center gap-0 md:justify-between text-[17px] md:text-[28px] font-black tracking-[0.17em] md:tracking-[0.26em] whitespace-nowrap">
-                <span className="text-red-600">KRID</span>
-                <span className="text-gray-900">HOMES</span>
-              </div>
-              <div className="mt-2 flex items-center justify-between text-[6px] md:text-[8px] font-black tracking-[0.14em] text-gray-900 uppercase whitespace-nowrap">
-                <span className="h-px w-[36px] md:w-[56px] bg-gray-500"></span>
-                <span>Your Property Partner</span>
-                <span className="h-px w-[36px] md:w-[56px] bg-gray-500"></span>
-              </div>
-            </div>
+            <img
+              src={brandWordmark}
+              alt="KridHomes wordmark"
+              className="h-8 md:h-10 w-auto"
+            />
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
