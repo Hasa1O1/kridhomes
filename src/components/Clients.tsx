@@ -48,6 +48,7 @@ const certifications = [
   {
     name: 'Workers Compensation',
     logo: workersCompensationLogo,
+    imageClassName: 'scale-95',
   },
   {
     name: 'NAPSA',
@@ -60,6 +61,7 @@ const certifications = [
   {
     name: 'ZPPA',
     logo: zppaLogo,
+    imageClassName: 'scale-90',
   },
 ];
 
@@ -113,13 +115,13 @@ export default function Clients() {
             {certifications.map((cert) => (
               <div
                 key={cert.name}
-                className="text-center p-4 bg-gray-50 rounded-lg min-h-[160px] flex flex-col items-center justify-center"
+                className="text-center p-4 bg-gray-50 rounded-lg min-h-[176px] flex flex-col items-center justify-center"
               >
-                <div className="h-20 w-full flex items-center justify-center mb-3">
+                <div className="h-24 sm:h-28 w-full flex items-center justify-center mb-3 overflow-visible">
                   <img
                     src={cert.logo}
                     alt={`${cert.name} logo`}
-                    className="max-h-20 w-full object-contain"
+                    className={`max-h-full max-w-full object-contain ${cert.imageClassName ?? ''}`}
                   />
                 </div>
                 <div className="text-sm font-semibold text-gray-900">
