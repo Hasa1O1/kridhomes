@@ -3,7 +3,12 @@ import keyHouseLogo from '../lib/KeyHouse Logo.jpeg';
 import ludexLogo from '../lib/Ludex Supply Logo.png';
 import merakiLogo from '../lib/Meraki Farms Logo.jpeg';
 import oakbergLogo from '../lib/Oakberg Logo.jpeg';
+import napsaLogo from '../lib/napsa logo.png';
+import pacraLogo from '../lib/pacra logo.jpg';
 import primeAxisLogo from '../lib/Prime Axis Designs Logo.jpeg';
+import workersCompensationLogo from '../lib/workers compansation logo.png';
+import zivsLogo from '../lib/ZIVS logo.png';
+import zppaLogo from '../lib/ZPPA logo.jpg';
 
 const clients = [
   {
@@ -32,6 +37,29 @@ const clients = [
   },
   {
     name: 'And More...',
+  },
+];
+
+const certifications = [
+  {
+    name: 'PACRA',
+    logo: pacraLogo,
+  },
+  {
+    name: 'Workers Compensation',
+    logo: workersCompensationLogo,
+  },
+  {
+    name: 'NAPSA',
+    logo: napsaLogo,
+  },
+  {
+    name: 'ZIVS Member',
+    logo: zivsLogo,
+  },
+  {
+    name: 'ZPPA',
+    logo: zppaLogo,
   },
 ];
 
@@ -81,35 +109,21 @@ export default function Clients() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {[
-              'PACRA',
-              'Workers Compensation',
-              'NAPSA',
-              'ZIVS Member',
-              'ZPPA',
-            ].map((cert) => (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6">
+            {certifications.map((cert) => (
               <div
-                key={cert}
-                className="text-center p-4 bg-gray-50 rounded-lg"
+                key={cert.name}
+                className="text-center p-4 bg-gray-50 rounded-lg min-h-[160px] flex flex-col items-center justify-center"
               >
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
+                <div className="h-20 w-full flex items-center justify-center mb-3">
+                  <img
+                    src={cert.logo}
+                    alt={`${cert.name} logo`}
+                    className="max-h-20 w-full object-contain"
+                  />
                 </div>
                 <div className="text-sm font-semibold text-gray-900">
-                  {cert}
+                  {cert.name}
                 </div>
               </div>
             ))}
