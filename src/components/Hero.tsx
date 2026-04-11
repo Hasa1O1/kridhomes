@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gray-100 pt-20"
+      className="relative min-h-screen flex items-center justify-center bg-gray-100 pt-20 w-full max-w-full overflow-x-clip"
     >
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -36,9 +36,9 @@ export default function Hero() {
         <div className="absolute bottom-20 left-10 w-72 h-72 bg-red-50 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse delay-700"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <div className="space-y-8 bg-white/65 backdrop-blur-sm rounded-3xl px-6 py-10 sm:px-10 shadow-2xl border border-white/50">
-          <div className="relative overflow-hidden rounded-3xl bg-white/80 p-3 sm:p-4 shadow-inner">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center overflow-x-clip">
+        <div className="space-y-8 w-full max-w-full bg-white/65 backdrop-blur-sm rounded-3xl px-4 py-10 sm:px-10 shadow-2xl border border-white/50 overflow-x-hidden">
+          <div className="relative w-full max-w-full overflow-hidden rounded-3xl bg-white/80 p-3 sm:p-4 shadow-inner">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-white via-white/80 to-transparent z-10"></div>
 
@@ -46,7 +46,7 @@ export default function Hero() {
               {[...heroImages, ...heroImages].map((image, index) => (
                 <div
                   key={`${image.alt}-${index}`}
-                  className="w-[260px] sm:w-[340px] lg:w-[380px] h-[220px] sm:h-[280px] lg:h-[320px] overflow-hidden rounded-2xl bg-gray-100 shadow-lg ring-1 ring-black/5 shrink-0"
+                  className="w-[72vw] max-w-[240px] sm:w-[340px] lg:w-[380px] h-[220px] sm:h-[280px] lg:h-[320px] overflow-hidden rounded-2xl bg-gray-100 shadow-lg ring-1 ring-black/5 shrink-0"
                 >
                   <img
                     src={image.src}
