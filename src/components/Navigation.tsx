@@ -15,19 +15,23 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-md z-50">
+    <nav className="fixed top-0 w-full max-w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <a
             href="./index.html"
-            className="flex items-center space-x-3"
+            className="flex min-w-0 flex-1 items-center space-x-2 sm:space-x-3"
             aria-label="Go to home page"
           >
-            <img src={logo} alt="KridHomes logo" className="h-16 md:h-20 w-auto" />
+            <img
+              src={logo}
+              alt="KridHomes logo"
+              className="h-12 sm:h-14 md:h-20 w-auto shrink-0"
+            />
             <img
               src={brandWordmark}
               alt="KridHomes wordmark"
-              className="h-8 md:h-10 w-auto"
+              className="h-6 sm:h-7 md:h-10 w-auto max-w-[170px] sm:max-w-[220px] object-contain"
             />
           </a>
 
@@ -50,8 +54,9 @@ export default function Navigation() {
           </div>
 
           <button
-            className="md:hidden text-gray-800 ml-auto"
+            className="md:hidden text-gray-800 ml-3 shrink-0 p-1"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -59,7 +64,7 @@ export default function Navigation() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white border-t shadow-md">
           <div className="px-4 pt-2 pb-4 space-y-2 text-center">
             {navLinks.map((link) => (
               <a

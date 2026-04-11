@@ -8,7 +8,7 @@ type PageLayoutProps = {
 
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
       {children}
       <Footer />
