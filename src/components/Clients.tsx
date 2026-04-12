@@ -67,8 +67,8 @@ const certifications = [
 
 export default function Clients() {
   return (
-    <section className="py-24 bg-gray-50 w-full max-w-full overflow-x-clip">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-x-hidden">
+    <section className="py-24 bg-gray-50 w-full max-w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full overflow-hidden">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide mb-4">
             TRUSTED BY LEADING ORGANIZATIONS
