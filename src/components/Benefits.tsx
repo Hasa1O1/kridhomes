@@ -60,9 +60,6 @@ export default function Benefits() {
 
           <div className="space-y-8 order-1 lg:order-2 text-center lg:text-left">
             <div>
-              <div className="inline-block px-4 py-2 bg-red-50 text-red-600 rounded-full text-sm font-semibold tracking-wide mb-4">
-                WHY CHOOSE KRIDHOMES
-              </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose <span className="text-red-600">KridHomes</span>
               </h2>

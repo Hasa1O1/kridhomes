@@ -5,6 +5,7 @@ import {
   Settings,
   Lightbulb,
   ArrowRight,
+  CheckCircle2,
 } from 'lucide-react';
 
 const services = [
@@ -123,9 +124,13 @@ export default function Services() {
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="text-gray-700 text-sm leading-relaxed"
+                      className="flex items-start gap-3 text-gray-700 text-sm leading-relaxed"
                     >
-                      {feature}
+                      <CheckCircle2
+                        size={18}
+                        className="mt-0.5 shrink-0 text-red-600"
+                      />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>

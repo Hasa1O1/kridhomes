@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import heroImage1 from '../lib/hero image 1.png';
 import heroImage2 from '../lib/hero image 2.png';
 import heroImage3 from '../lib/hero image 3.png';
+import brandWordmark from '../lib/nav bar kridhomes name picture.png';
 
 const heroImages = [
   {
@@ -38,10 +39,13 @@ export default function Hero() {
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center overflow-hidden">
         <div className="space-y-8 w-full max-w-full bg-white/65 backdrop-blur-sm rounded-3xl px-4 py-10 sm:px-10 shadow-2xl border border-white/50 overflow-hidden">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-[0.08em]">
-            <span className="text-red-600">KRID</span>{' '}
-            <span className="text-gray-900">HOMES</span>
-          </h1>
+          <div className="flex justify-center">
+            <img
+              src={brandWordmark}
+              alt="KRID HOMES"
+              className="h-10 sm:h-12 lg:h-14 w-auto max-w-full object-contain"
+            />
+          </div>
 
           <div className="relative w-full max-w-full overflow-hidden rounded-3xl bg-white/80 p-3 sm:p-4 shadow-inner">
             <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
